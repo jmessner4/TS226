@@ -8,3 +8,4 @@ s_i=0;
 closed=false;
 res=cc_encode(u,treillis,s_i,closed);
 
+res2 = viterbi_decode(res, treillis, s_i, closed);
