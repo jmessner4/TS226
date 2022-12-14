@@ -43,3 +43,7 @@ end
 % plot(test2),
 % plot(test3),
 % plot(test3),
+% 
+y2 = [-1 -1 -1 -1 1 1 -1 1 1 1 -1 1 -1 -1];
+
+res2 = viterbi_decode(res, y2, treillis, s_i, closed);
