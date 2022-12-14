@@ -21,4 +21,6 @@ for i=1:length(res)
     end
 end
 
-res = viterbi_decode(res, y, treillis, s_i, closed);
+y2 = [-1 -1 -1 -1 1 1 -1 1 1 1 -1 1 -1 -1];
+
+res2 = viterbi_decode(res, y2, treillis, s_i, closed);
