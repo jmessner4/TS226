@@ -1,4 +1,4 @@
-function [u,K] = viterbi_decode(y, treillis, s_i, closed)
+function u = viterbi_decode(y, treillis, s_i, closed)
 
 ns = treillis.numOutputSymbols/treillis.numInputSymbols;
 numStates = treillis.numStates;

@@ -52,6 +52,8 @@ fprintf(line      );
 fprintf(msg_header);
 fprintf(line      );
 
+d0 = 1;
+d1 = 100;
 
 %% Simulation
 for iSNR = 1:length(EbN0dB)
@@ -131,7 +133,7 @@ for iSNR = 1:length(EbN0dB)
     reverseStr = repmat(sprintf('\b'), 1, msg_sz);
     
     TEB(iSNR) = bitErr/(pqtNbr*K);
-    TEP(iSNR) = pqtErr/pqtNbr;
+    TEP(iSNR) = mtdimpulsion(d0,d1,K,N,treillis, s_i, closed, R, EbN0); %pqtErr/pqtNbr;
     refreshdata(hTEB);
     refreshdata(hTEP);
     drawnow limitrate
@@ -142,5 +144,7 @@ for iSNR = 1:length(EbN0dB)
     
 end
 fprintf(line      );
+
+
 %%
 save('NC.mat','EbN0dB','TEB', 'TEP', 'R', 'K', 'N', 'Pb_u', 'Pe_u')

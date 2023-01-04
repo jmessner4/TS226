@@ -21,7 +21,7 @@ for i=1:length(res)
     end
 end
 
-[res,K] = viterbi_decode(y, treillis, s_i, closed);
+res = viterbi_decode(y, treillis, s_i, closed);
 
 
 % %Impact sur la mémoire du code
