@@ -4,7 +4,7 @@ clc,
 
 treillis=poly2trellis(3,[5,7]);
 u=randi([0 1],1,8);
-
+utest = [1 1 0 1 0];
 s_i=0;
 closed=false;
 
