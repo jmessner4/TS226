@@ -21,7 +21,7 @@ for i=1:length(res)
     end
 end
 
-res = viterbi_decode(y, treillis, s_i, closed);
+[res,K] = viterbi_decode(y, treillis, s_i, closed);
 
 
 % %Impact sur la mémoire du code
@@ -43,6 +43,3 @@ res = viterbi_decode(y, treillis, s_i, closed);
 % plot(test3),
 % plot(test3),
 
-% y2 = [-1 -1 -1 -1 1 1 -1 1 1 1 -1 1 -1 -1];
-% 
-% res2 = viterbi_decode(y, treillis, s_i, closed);
