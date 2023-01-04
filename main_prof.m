@@ -90,6 +90,7 @@ for iSNR = 1:length(EbN0dB)
         
         u_rec=Lc<0;
         u_rec=vitdec(u_rec,treillis,96,'trunc','hard');
+        %A utiliser quand viterbi_decide OK
         %u_rec=viterbi_decode(u_rec,treillis,s_i,closed);
         BE      = sum(u(:) ~= u_rec(:)); % Nombre de bits faux sur cette trame
         bitErr  = bitErr + BE;

@@ -1,3 +1,5 @@
+%Pas utile
+
 function [TEB] = calculTEB (treillis)
 
 EbN0dB_min  = 0; 
@@ -8,7 +10,7 @@ EbN0dB = EbN0dB_min:EbN0dB_step:EbN0dB_max;
 EbN0 = 10.^(EbN0dB/10);
 len=length(EbN0);
 TEB=zeros(1,len);
-ErrTotal=10;
+ErrTotal=100;
 
 for i=1:len
     NbErr=0;    %On compte le nombre d'erreur
@@ -22,6 +24,7 @@ for i=1:len
         %On choisit l'état inital à 0 par convention
         s_i=0;
         [c,s_f]=cc_encode(u,treillis,s_i,closed);
+        %a utiliser quand ok
         %dec=viterbi_decode(c,y,treillis,s_i,closed);
         dec=vitdec(c,treillis,96,'trunc','hard');
         DiffErr=sum(dec~=u);
