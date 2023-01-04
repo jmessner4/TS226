@@ -10,7 +10,6 @@ closed=false;
 
 [res,s_f]=cc_encode(u,treillis,s_i,closed);
 %On utiliser convenc pour vérifier que l'on obtient le bon résultat
-test=convenc(u,treillis,s_i);
 
 y = zeros(1, length(res));
 
@@ -22,27 +21,27 @@ for i=1:length(res)
     end
 end
 
-%res = viterbi_decode(res, y, treillis, s_i, closed);
+res = viterbi_decode(y, treillis, s_i, closed);
 
 
-%Impact sur la mémoire du code
-
-test1=poly2trellis(2,[2,3]);
-test2=poly2trellis(3,[5,7]);
-test3=poly2trellis(4,[13,15]);
-test4=poly2trellis(7,[133,171]);
-
-calculTEB(test1);
-calculTEB(test2);
-calculTEB(test3);
-calculTEB(test4);
-
-figure,
-plot(test1),
-hold on,
-plot(test2),
-plot(test3),
-plot(test3),
+% %Impact sur la mémoire du code
+% 
+% test1=poly2trellis(2,[2,3]);
+% test2=poly2trellis(3,[5,7]);
+% test3=poly2trellis(4,[13,15]);
+% test4=poly2trellis(7,[133,171]);
+% 
+% calculTEB(test1);
+% calculTEB(test2);
+% calculTEB(test3);
+% calculTEB(test4);
+% 
+% figure,
+% plot(test1),
+% hold on,
+% plot(test2),
+% plot(test3),
+% plot(test3),
 
 % y2 = [-1 -1 -1 -1 1 1 -1 1 1 1 -1 1 -1 -1];
 % 
