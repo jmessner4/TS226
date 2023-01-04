@@ -46,4 +46,4 @@ end
 % 
 y2 = [-1 -1 -1 -1 1 1 -1 1 1 1 -1 1 -1 -1];
 
-res2 = viterbi_decode(res, y2, treillis, s_i, closed);
+res2 = viterbi_decode(y, treillis, s_i, closed);
