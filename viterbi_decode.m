@@ -1,4 +1,4 @@
-function u = viterbi_decode(res, y, treillis, s_i, closed)
+function Metrique = viterbi_decode(res, y, treillis, s_i, closed)
 
 m = treillis.numInputSymbols;
 L = length(y)/log2(treillis.numOutputSymbols);
@@ -34,4 +34,5 @@ for i=1:L
 end
 
 
-u = 4;
+% On parcourt pour retrouver le message
+Message = NaN(1, 
