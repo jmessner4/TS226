@@ -133,7 +133,7 @@ for iSNR = 1:length(EbN0dB)
     reverseStr = repmat(sprintf('\b'), 1, msg_sz);
     
     TEB(iSNR) = bitErr/(pqtNbr*K);
-    TEP(iSNR) = mtdimpulsion(d0,d1,K,N,treillis, s_i, closed, R, EbN0); %pqtErr/pqtNbr;
+    TEP(iSNR) = pqtErr/pqtNbr;
     refreshdata(hTEB);
     refreshdata(hTEP);
     drawnow limitrate

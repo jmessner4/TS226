@@ -18,8 +18,9 @@ end
 D = min(v):max(v); %D est l'ensemble des entiers dans v donc l'esnemble des entiers compris entre l'élément min et l'élément max de v
 
 Ad = zeros(1: length(D));
+TEP = 0;
 
 for d=1:length(D)
-    Ad(d) = (v==d);
+    Ad(d) = sum(v==d);
     TEP = TEP + 1/2*(Ad(d)*erfc(sqrt(d*R*EbN0)));
 end
